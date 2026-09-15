@@ -37,7 +37,7 @@ SRC_URI = "git://github.com/soccentric-orion/Orion-Instrumentation.git;protocol=
 # this recipe was first written -- confirmed by an actual do_fetch
 # failure (exit code 128) the first time this SRC_URI was ever
 # actually fetched anywhere in the fleet.
-INSTR_SRCREV ?= "4a93d7e"
+INSTR_SRCREV ?= "bf7403ef9643893de626e019c2499442407f6d4a"
 SRCREV = "${@d.getVar('AUTOREV') if d.getVar('ORION_DEV_BUILD') == '1' else d.getVar('INSTR_SRCREV')}"
 # One version for the whole suite (REQ §2). This used to read PV from
 # S/VERSION via a python expression: PV -> S -> WORKDIR -> PV (WORKDIR's own
