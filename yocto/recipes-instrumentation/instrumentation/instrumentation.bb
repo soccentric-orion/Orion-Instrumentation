@@ -18,7 +18,7 @@ SRC_URI = "git://github.com/soccentric-orion/Orion-Instrumentation.git;protocol=
 # -- a release build must never silently float.
 # Held in its own variable: referencing SRCREV from inside SRCREV's own
 # expansion is self-referential and bitbake would recurse on it.
-INSTR_SRCREV ?= "bf7403ef9643893de626e019c2499442407f6d4a"
+INSTR_SRCREV ?= "5a3cb36db9dfa0b57e1331dbdc49c8b5e3da7da3"
 SRCREV = "${@d.getVar('AUTOREV') if d.getVar('ORION_DEV_BUILD') == '1' else d.getVar('INSTR_SRCREV')}"
 # One version for the whole suite (REQ §2). This used to read PV from
 # S/VERSION via a python expression: PV -> S -> WORKDIR -> PV (WORKDIR's own
